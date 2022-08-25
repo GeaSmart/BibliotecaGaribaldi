@@ -4,10 +4,10 @@ namespace AuthorMicroservice.Services
 {
     public interface IAuthorService
     {
-        Task<IEnumerable<Author>> GetProductList();
-        Task<Author> GetProductById(int id);
-        Task<Author> AddProduct(Author author);
-        Task<Author> UpdateProduct(Author author);
-        Task<bool> DeleteProduct(int Id);        
+        Task<IEnumerable<Author>> GetAll();
+        Task<Author> GetById(int id);
+        Task<Author> Add(Author author);
+        Task<Author> Update(Author author);
+        Task<bool> Delete(int Id);        
     }
 }

@@ -4,10 +4,10 @@ namespace PublicationMicroservice.Services
 {
     public interface IBookService
     {
-        Task<IEnumerable<Book>> GetProductList();
-        Task<Book> GetProductById(int id);
-        Task<Book> AddProduct(Book book);
-        Task<Book> UpdateProduct(Book book);
-        Task<bool> DeleteProduct(int id);
+        Task<IEnumerable<Book>> GetAll();
+        Task<Book> GetById(int id);
+        Task<Book> Add(Book book);
+        Task<Book> Update(Book book);
+        Task<bool> Delete(int id);
     }
 }
