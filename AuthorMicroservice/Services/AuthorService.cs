@@ -35,7 +35,7 @@ namespace AuthorMicroservice.Services
         }
         public async Task<bool> Delete(int Id)
         {
-            var filteredData = context.Authors.Where(x => x.AuthorId == Id).FirstOrDefaultAsync();
+            var filteredData = await context.Authors.Where(x => x.AuthorId == Id).FirstOrDefaultAsync();
             var result = context.Remove(filteredData);
             await context.SaveChangesAsync();
             return result != null;
