@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+  AuthorMicroservice:
+   image: ${DOCKER_REGISTRY-}authormicroservice:v1
+   build:
+    context: ./AuthorMicroservice
+    dockerfile: AuthorMicroservice.dockerfile
+   environment:
+    - CONNECTIONSTRINGS__DEFAULTCONNECTION=Data Source=192.168.1.19,1433;Initial Catalog=BibliotecaGaribaldi_Author;integrated security=true
+   ports:
+    - "4201:80"
+  PublicationMicroservice:
+   image: ${DOCKER_REGISTRY-}publicationmicroservice:v1
+   build:
+    context: ./PublicationMicroservice
+    dockerfile: PublicationMicroservice.dockerfile
+   environment:
+    - CONNECTIONSTRINGS__DEFAULTCONNECTION=Data Source=192.168.1.19,1433;Initial Catalog=BibliotecaGaribaldi_Publication;integrated security=true
+   ports:
+    - "4202:80"
