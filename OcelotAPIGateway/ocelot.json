@@ -4,9 +4,9 @@
   },
   "Routes": [
     {
-      "UpstreamPathTemplate": "/gateway/product",
+      "UpstreamPathTemplate": "/gateway/author",
       "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/api/products",
+      "DownstreamPathTemplate": "/api/authors",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -16,9 +16,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/product/{id}",
+      "UpstreamPathTemplate": "/gateway/author/{id}",
       "UpstreamHttpMethod": [ "Get", "Delete" ],
-      "DownstreamPathTemplate": "/api/products/{id}",
+      "DownstreamPathTemplate": "/api/authors/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -28,9 +28,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/product",
+      "UpstreamPathTemplate": "/gateway/author",
       "UpstreamHttpMethod": [ "Post", "Put" ],
-      "DownstreamPathTemplate": "/api/products",
+      "DownstreamPathTemplate": "/api/authors",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -40,9 +40,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/user",
+      "UpstreamPathTemplate": "/gateway/book",
       "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/api/users",
+      "DownstreamPathTemplate": "/api/books",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -52,9 +52,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/user/{id}",
+      "UpstreamPathTemplate": "/gateway/book/{id}",
       "UpstreamHttpMethod": [ "Get", "Delete" ],
-      "DownstreamPathTemplate": "/api/users/{id}",
+      "DownstreamPathTemplate": "/api/books/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -64,9 +64,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/user",
+      "UpstreamPathTemplate": "/gateway/book",
       "UpstreamHttpMethod": [ "Post", "Put" ],
-      "DownstreamPathTemplate": "/api/users",
+      "DownstreamPathTemplate": "/api/books",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
