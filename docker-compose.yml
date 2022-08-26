@@ -6,7 +6,7 @@ services:
     context: ./AuthorMicroservice
     dockerfile: AuthorMicroservice.dockerfile
    environment:
-    - CONNECTIONSTRINGS__DEFAULTCONNECTION=Data Source=192.168.1.19,1433;Initial Catalog=BibliotecaGaribaldi_Author;integrated security=true
+    - CONNECTIONSTRINGS__DEFAULTCONNECTION=Data Source=192.168.1.19,1433;Initial Catalog=BibliotecaGaribaldi_Author;User Id=sa;Password=EC1admin;
    ports:
     - "4201:80"
   PublicationMicroservice:
@@ -15,6 +15,6 @@ services:
     context: ./PublicationMicroservice
     dockerfile: PublicationMicroservice.dockerfile
    environment:
-    - CONNECTIONSTRINGS__DEFAULTCONNECTION=Data Source=192.168.1.19,1433;Initial Catalog=BibliotecaGaribaldi_Publication;integrated security=true
+    - CONNECTIONSTRINGS__DEFAULTCONNECTION=Data Source=192.168.1.19,1433;Initial Catalog=BibliotecaGaribaldi_Publication;User Id=sa;Password=EC1admin;
    ports:
     - "4202:80"
