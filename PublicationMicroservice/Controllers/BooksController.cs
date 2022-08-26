@@ -7,11 +7,11 @@ namespace PublicationMicroservice.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BookController : ControllerBase
+    public class BooksController : ControllerBase
     {
         private readonly IBookService service;
 
-        public BookController(IBookService service)
+        public BooksController(IBookService service)
         {
             this.service = service;
         }

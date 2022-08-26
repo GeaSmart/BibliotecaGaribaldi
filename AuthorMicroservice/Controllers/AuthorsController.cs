@@ -7,11 +7,11 @@ namespace AuthorMicroservice.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthorController : ControllerBase
+    public class AuthorsController : ControllerBase
     {
         private readonly IAuthorService service;
 
-        public AuthorController(IAuthorService service)
+        public AuthorsController(IAuthorService service)
         {
             this.service = service;
         }
